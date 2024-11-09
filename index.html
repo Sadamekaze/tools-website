@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="grid-table">
+                <input type="radio" id="text-to-li" name="mode" value="text-to-li">
+                <label class="radio-button" for="text-to-li">text to li</label>
+            
+                <input type="radio" id="replace-lt" name="mode" value="replace-&lt;">
+                <label class="radio-button" for="replace-lt">replace &lt;</label>
+            
+                <input type="radio" id="tab-replace" name="mode" value="tab-replace">
+                <label class="radio-button" for="tab-replace">tab replace</label>
+                
+                <input type="radio" id="auto-to-file" name="mode" value="auto-to-file">
+                <label class="radio-button" for="auto-to-file">auto to file</label>
+            </div>
+            <textarea name="data" id="input"></textarea>
+            <button id="tombol" onclick="proses()">Convert</button>
+        </section>
+        
+        <!-- <textarea id="hasil" disabled></textarea> -->
+        <div id="hasil-wrapper" style="border: none;">
+            <textarea id="hasilBox" disabled></textarea>
+            <button id="copyButton" onclick="copyToClipboard()">Copy Hasil</button>
+            <div id="hasil" style="border: none;"></div>
+        </div>
+    </main>
+    
+</body>
+</html>
